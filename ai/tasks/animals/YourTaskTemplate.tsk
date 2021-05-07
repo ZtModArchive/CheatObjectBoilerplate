@@ -1,0 +1,24 @@
+<BFAITaskTemplateList>
+   <BFAITaskTemplate Name="YourFunction" Priority="10"  UniqueID="Cheater:YourFunction">
+      <BFAICreateData>
+         <Subjects>
+            <Cheater/>
+         </Subjects>
+         <Targets>
+            <self/>
+         </Targets>
+         <Objects>
+         </Objects>
+      </BFAICreateData>
+      <BFAIEvalData fixedScore="10000"/>
+      <BFBehExecTask>
+     <BFBehScript context="behavior" file="scripts/YourFunction.lua" function="yourFunction" />
+      </BFBehExecTask>
+      <BFAICompletionData/>
+      <BFAIFailureData>
+         <BFBehExecTask>
+            <BFBehPlaySet behSet="FailureSet"/>
+         </BFBehExecTask>
+      </BFAIFailureData>
+   </BFAITaskTemplate>
+</BFAITaskTemplateList>
