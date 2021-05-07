@@ -1,20 +1,11 @@
--- Includes
+-- Include Zoo Tycoon 2 libraries
 include "scenario/scripts/entity.lua"
 include "scenario/scripts/token.lua"
 include "scenario/scripts/ui.lua"
 include "scenario/scripts/misc.lua"
 
---- Function for try-catching
---- @param func function
-function try(func)
-    -- Try
-    local status, exception = pcall(func)
-    -- Catch
-    if not status then
-        -- Show exception in the message panel in-game
-        displayZooMessageTextWithZoom("Exception: "..exception, 1, 30)
-    end
-end
+--  Include Other scripts
+include "scripts/try.lua"
 
 --- This is a boilerplate function
 --- @param args any
